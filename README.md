@@ -1,5 +1,12 @@
 # serverless-hexo
-一个基于serverless和hexo的十分钟发布自己的博客
+一个基于腾讯云serverless和hexo的十分钟发布自己的博客
+使用主题是anatole-core基于anatole个性化修改
+
+[博客地址](https://my-bucket-1254129026.cos-website.ap-guangzhou.myqcloud.com/)
+
+``` yaml
+更多问题查看 /themes/anatole-core/_config.yml
+```
 
 ## 安装前提
 
@@ -42,12 +49,12 @@ $ npm install
 可以通过 hexo g 命令生成静态页面
 
 ``` yaml
+生成静态页面时，引用文件可能存在缓存
 建议使用hexo clean 先清除生成静态页面
 ```
 
 ``` 
 $ hexo g   # generate 
-
 ```
 
 添加页面
@@ -64,6 +71,13 @@ $ hexo new page --path 路径/文件名 文件title
 $ hexo s   # server
 ```
 
+``` yaml
+注：如您的账号未登陆或注册腾讯云，您可以直接通过微信扫描命令行中的二维码进行授权登陆和注册。
+或者配置.env文件 
+TENCENT_SECRET_ID=
+TENCENT_SECRET_KEY=
+```
+
 ## 部署
 
 ``` 
@@ -75,3 +89,5 @@ $ sls --debug
 ``` 
 $ sls remove --debug
 ```
+
+[具体可参考完整模板仓库](https://github.com/tinafangkunding/serverless-hexo)
