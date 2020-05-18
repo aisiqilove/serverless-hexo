@@ -1,2 +1,2 @@
 # serverless-hexo
-A Blog Powered By Hexo
+一个基于serverless和hexo的十分钟发布自己的博客
